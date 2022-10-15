@@ -17,7 +17,7 @@ htmlwidgets: TRUE
 
 
 
-<title>test</title>
+<title>htmltest.knit</title>
 
 <script>// Pandoc 2.9 adds attributes on both header and div. We remove the former (to
 // be compatible with the behavior of Pandoc < 2.8).
@@ -354,42 +354,24 @@ display: none;
 
 
 
-<h1 class="title toc-ignore">test</h1>
 
 </div>
 
 
-<div id="titel" class="section level2">
-<h2>Titel</h2>
-<p>Vi kører her en test:</p>
+<p>Begin with enabling relevant packages:</p>
 <pre class="r"><code>library(ggplot2)
-library(plotly)</code></pre>
-<pre><code>## 
-## Vedhæfter pakke: &#39;plotly&#39;</code></pre>
-<pre><code>## Det følgende objekt er maskeret fra &#39;package:ggplot2&#39;:
-## 
-##     last_plot</code></pre>
-<pre><code>## Det følgende objekt er maskeret fra &#39;package:stats&#39;:
-## 
-##     filter</code></pre>
-<pre><code>## Det følgende objekt er maskeret fra &#39;package:graphics&#39;:
-## 
-##     layout</code></pre>
-<pre class="r"><code>ggplot_plot &lt;- iris %&gt;%
-  ggplot(aes(Petal.Length, Petal.Width, color=Species)) + 
-  geom_point()
-
-plotly_plot &lt;- ggplotly(ggplot_plot)
-
-plotly_plot
-
-
-
-#</code></pre>
-{% include map.html %}
-<iframe src="/map.html" height="800px" width="100%">
+library(plotly)
+library(leaflet)</code></pre>
+<p>Then create a basic plot with the <code>leaflet</code> package that
+finds Copenhagen:</p>
+<pre class="r"><code>m &lt;- leaflet() %&gt;%
+  addTiles() %&gt;%  # Add default OpenStreetMap map tiles
+  addMarkers(lng=12.56, lat=55.67, popup=&quot;Copenhagen&quot;)
+m  # Print the map</code></pre>
+<center>
+<iframe src="/map.html" height="400px" width="100%">
 </iframe>
-</div>
+</center>
 
 
 
