@@ -1,9 +1,7 @@
 ---
-title: ""
-output: 
-  html_document: 
-    keep_md: yes
-    self_contained: no
+title: "Creating and manipulating geodata with R"
+excerpt: ""
+collection: portfolio
 htmlwidgets: TRUE
 ---
 
