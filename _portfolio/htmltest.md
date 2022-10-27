@@ -23,7 +23,7 @@ m <- leaflet() %>%
 m  # Print the map
 ```
 
-<center><iframe src="/map.html" height = "400px" width = "100%"></iframe></center>
+<center><iframe src="/map.html" height = "400px" width = "100%" frameBorder="0"></iframe></center>
 
 
 
