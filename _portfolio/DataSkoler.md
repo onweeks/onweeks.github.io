@@ -1,5 +1,5 @@
 ---
-title: "DatSkolerMarkdown"
+title: "Using ggplot2 and plotly with R to produce interactive graphs
 excerpt: ""
 collection: portfolio
 htmlwidgets: TRUE
