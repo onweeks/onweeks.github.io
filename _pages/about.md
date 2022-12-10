@@ -8,7 +8,7 @@ redirect_from:
   - /about.html
 ---
 
-On this site i will be showcasing projects and thel ike, may it be from work, school or from personal interests.
+On this site i will be showcasing projects and the like, may it be from work, school or from personal interests.
 This will mainly be projects related to programming and data science using programs and languages such as R, SAS, Python etc. 
 
 
