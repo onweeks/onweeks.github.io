@@ -20,14 +20,14 @@ The map functions ends up looking something like:
 
 ```sas
 	%map(
-		Dataset = 				/* Mandatory. Dataset. */
-		,Var =					/* Mandatory. Variable to plot. */
+		Dataset = 			/* Mandatory. Dataset. */
+		,Var =				/* Mandatory. Variable to plot. */
 		,output_path = 			/* Optional. Output path if PDF is desired. */
-		,ID =					/* Optional. ID code, e.g. state name. Standard: ID */ 
-		,discrete_or_cat =      /* Optional. Discrete or categorical variable. Standard: Discrete */
-		,nlevels =				/* Optional. Number of intervals. Standard: 5. Standard: 5 */
-		,format = 				/* Optional. Display value format. Standard: commax10.2. */
-		,miss_color			    /* Optional. Missing data color. Standard: yellow */
+		,ID =				/* Optional. ID code, e.g. state name. Standard: ID */ 
+		,discrete_or_cat =      	/* Optional. Discrete or categorical variable. Standard: Discrete */
+		,nlevels =			/* Optional. Number of intervals. Standard: 5. Standard: 5 */
+		,format = 			/* Optional. Display value format. Standard: commax10.2. */
+		,miss_color			/* Optional. Missing data color. Standard: yellow */
 				)
 ```
 
