@@ -33,7 +33,7 @@ The map functions ends up looking something like:
 
 To which the finished product could look something like (using automatically generated intervals):
 
-![[MapExample.png|600]]
+![MapExample](/_includes/MapExample.jpg)
 
 # Construction
 Only the essential parts, message me if interested in more :) 
