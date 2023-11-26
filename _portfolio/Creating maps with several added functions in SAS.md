@@ -16,7 +16,8 @@ Automatically generated intervals for the heatmap (based on Nelder's algorithm),
 - A zoomed inset for small or remote regions.
 - Exporting the output image as PDF or PNG.
 - Saving the map function as a permanent macro using mstored, enabling easy integration into other programs.
-- The map functions result in a visualization like this:
+
+The map functions result in a visualization like this:
 
 ```sas
 	%map(
