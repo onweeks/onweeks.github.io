@@ -5,7 +5,7 @@ collection: portfolio
 ---
 # Introduction
 
-Creating accurate maps of countries and their states or municipalities can be an interesting way to showcase data across a geospatial dimension. Nearly everything desired in this context can be achieved using SAS's ´g´-functions. A heatmap can effectively display diversity across regions, and additional functions can further enhance the program and its outputs.
+Creating accurate maps of countries and their states or municipalities can be an interesting way to showcase data across a geospatial dimension. Nearly everything desired in this context can be achieved using SAS's `g`-functions. A heatmap can effectively display diversity across regions, and additional functions can further enhance the program and its outputs.
 
 Below is a section where a heatmap of Denmark and its municipalities is created in SAS. This program can be modified to feature other countries and regions. Several interesting functions have been added to the program, allowing for customization and enhancement:
 
