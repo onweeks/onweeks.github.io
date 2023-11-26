@@ -10,7 +10,7 @@ locale                   : "en-US"
 title                    : "Oliver Weeks"
 title_separator          : "-"
 name                     : &name "Oliver Weeks"
-description              : &description "Stud. polit, BSc economics"
+description              : &description "Stud. polit, MSc economics"
 url                      : https://onweeks.github.io # the base hostname & protocol for your site e.g. "https://mmistakes.github.io"
 baseurl                  : "" # the subpath of your site, e.g. "/blog"
 repository               : "academicpages/academicpages.github.io"
@@ -102,7 +102,7 @@ author:
   instagram        :
   impactstory      :
   lastfm           :
-  linkedin         : "https://www.linkedin.com/in/oliver-weeks-9063971b4/"
+  linkedin         : "www.linkedin.com/in/oliver-weeks-9063971b4"
   orcid            : 
   pinterest        :
   soundcloud       :
