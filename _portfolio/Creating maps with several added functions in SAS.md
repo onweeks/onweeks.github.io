@@ -5,18 +5,18 @@ collection: portfolio
 ---
 # Introduction
 
-Creating actual maps of countries and their states or municipialities can be a interesting way of showcasing data across a geospatial dimension. Almost everything that can be desired in this regard can be done in SAS with the ´g´-functions. A heatmap should be able to show the diversity across the regions, furthermore added functions can be applied to enhance the program and output that is desired. 
+Creating accurate maps of countries and their states or municipalities can be an interesting way to showcase data across a geospatial dimension. Nearly everything desired in this context can be achieved using SAS's ´g´-functions. A heatmap can effectively display diversity across regions, and additional functions can further enhance the program and its outputs.
 
-In the section below, a heatmap of Denmark and it's municipilaties are created in SAS. The program could be modified to showcase another country and/or regions in that country. Some interesting functions are added to the program, such that the output can be customized and enhanced:
-- Automatically generated intervals for the heatmap (based on Nelders algorithm), such that the map shows diversity
-- Automatically convert input datavalue to numerical if it is a character-value (if it can be converted, e.g. is "0.53")
-- A format can be applied to the values if desired (possible to set intervals for the displayed value)
-- Different color schemes for categorical and discrete variables
-- Zoomed inset of regions that are small and/or lie far out from the mainland
-- Output image as PDF or PNG
-- Map function saved as a permanent macro using `mstored` , meaning that it can be easily called in other programs. 
+Below is a section where a heatmap of Denmark and its municipalities is created in SAS. This program can be modified to feature other countries and regions. Several interesting functions have been added to the program, allowing for customization and enhancement:
 
-The map functions ends up looking something like:
+Automatically generated intervals for the heatmap (based on Nelder's algorithm), highlighting regional diversity.
+- Conversion of input data values to numerical format if they are character values (convertible ones like "0.53").
+- An option to apply formatting to values as desired (including setting intervals for displayed values).
+- Distinct color schemes for categorical and continuous variables.
+- A zoomed inset for small or remote regions.
+- Exporting the output image as PDF or PNG.
+- Saving the map function as a permanent macro using mstored, enabling easy integration into other programs.
+- The map functions result in a visualization like this:
 
 ```sas
 	%map(
@@ -31,15 +31,14 @@ The map functions ends up looking something like:
 				)
 ```
 
-To which the finished product could look something like (using automatically generated intervals):
+The finished product could look something like this (using automatically generated intervals):
 
 ![](/images/MapExample.png)
 
 # Construction
-Only the essential parts, message me if interested in more :) 
+Only the essential parts are included; message me if you're interested in more details :)
 
-Using the maps already integrated in SAS, the different parts of the map has to be allocated to different datasets to display them in different positions on the map.
-This means based on the ID (municipial code in this example), create different datasets:
+Using the maps already integrated in SAS, the different parts of the map need to be allocated to different datasets to display them in various positions. This involves creating different datasets based on the ID (municipal code in this example):
 
 ```sas
 /* Mainland Danmark */
@@ -89,7 +88,7 @@ data dk_map_kbh;
 run;
 ```
 
-Then import the data that we wish to display in the map. A conversion is added so that if the variable is a character, and can be converted to numerical, it is converted:
+First, import the data you wish to display on the map. If a variable is a character and can be converted to a numerical value, include a conversion step:
 
 ```sas
 data &Dataset._map_temp;
@@ -110,7 +109,7 @@ data &Dataset._map_temp;
 run;
 ```
 
-Both the map data and the data that is to be displayed in the map are now imported. With the `proc gmap` procedure now display the maps. All the maps from the datasets we previously are created, such that they at the end can be imported into the same image. An example of the map creation could look like:
+Both the map data and the data to be displayed are now imported. Use the `proc gmap` procedure to display the maps. Create all the maps from the datasets we previously prepared, so they can eventually be combined into the same image. An example of the map creation process might look like this:
 
 ```sas
 /* Genererer kort af Mainland Danmark */
@@ -169,9 +168,9 @@ run;
 footnote;
 ```
 
-Repeat for all intended map parts.
+Repeat this process for all intended map parts.
 
-These maps are named with a corresponding name, e.g. 'born' for bornholm. Using the `proc greplay` procedure to display all the maps on top of each other as:
+Name these maps correspondingly, e.g., 'born' for Bornholm. Use the `proc greplay` procedure to layer all these maps on top of each other, as follows:
 
 ```sas
 /* Kører greplay */
@@ -211,9 +210,9 @@ treplay
 run;
 ```
 
-This will insert the maps into the same picture. The sizes of the x and y coordinates should correspond to the sizes of the map image set by e.g. `goptions xpixels=100 ypixels=100;`
+This approach will compile the maps into a single image. Ensure the sizes of the x and y coordinates match the dimensions of the map image set by commands like `goptions xpixels=100 ypixels=100;`.
 
-That's the main structure of the programme. Several additions can be made to add the functions previously mentioned in the introduction. 
+This is the main structure of the program. Additional features can be added to incorporate the functions mentioned in the introduction.
 
 
 
