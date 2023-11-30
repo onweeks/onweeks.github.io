@@ -1,6 +1,6 @@
 ---
 title: "Creating maps with several added functions in SAS"
-excerpt: ""
+excerpt: "Showcase of advanced map creation in SAS, featuring heatmap generation, automatic interval computation, data conversion, customizable formatting, and diverse export options for geographical visualization."
 collection: portfolio
 ---
 # Introduction
