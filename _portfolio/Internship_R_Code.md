@@ -1,6 +1,6 @@
 ---
 title: "Academic Internship Assignment: R Code"
-excerpt: "Portfolio piece demonstrating R code project from an academic internship at the Royal Danish Embassy in Tokyo. The project addresses Japan's aging population, employing data analysis to uncover trends and implications in a critical demographic issue."
+excerpt: "R code from my academic assignment during my internship at the Royal Danish Embassy in Tokyo. This project focuses on Japan's aging population, utilizing data analysis to reveal trends and implications in a critical demographic issue."
 collection: portfolio
 ---
 
