@@ -1,6 +1,6 @@
 ---
 title: "Geographical Mapping of Denmark in SAS"
-excerpt: "Showcase of advanced map creation in SAS, featuring heatmap generation, automatic interval computation, data conversion, customizable formatting, and diverse export options for geographical visualization."
+excerpt: "Showcase of advanced map creation in SAS, featuring choropleth map generation, automatic interval computation, data conversion, customizable formatting, and diverse export options for geographical visualization."
 collection: portfolio
 ---
 # Introduction
