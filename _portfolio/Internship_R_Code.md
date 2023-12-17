@@ -586,9 +586,47 @@ print(combined_choro)
 Pic_path_choro_combined <- paste0(path_to_workspace, "JapanChoroplethCombined.pdf")
 ggsave(Pic_path_choro_combined , plot = combined_choro, width =9, height = 5, dpi = 300)
 
+###################### labor graph ###################### 
+
+LaborData_path <- paste0(path_to_workspace, "LaborData.xlsx")
+LaborData<- import(LaborData_path)
+
+scaling_factor <- 0.0005
+
+# plot
+laborplot <-ggplot(LaborData, aes(x = Year)) +
+  geom_bar(aes(y = `Rate` / scaling_factor, fill = "Application/Job Opening Rate"), stat = "identity", alpha = 0.7) +
+  geom_line(aes(y = `Monthly active applications(person(s))` / 1000, color = "Applications"), linewidth = 2) +
+  geom_line(aes(y = `Monthly active job openings (person (s))` / 1000, color = "Job Openings"), linewidth = 2) +
+  labs(color = "", fill = "") +
+  scale_fill_manual(values = c("Application/Job Opening Rate" = "darkgrey")) +
+  scale_y_continuous(
+    name = "Monthly Active Job Applicants & Job Openings \n (Thousands of People)",
+    labels = scales::comma, 
+    sec.axis = sec_axis(~ . * scaling_factor, name = "Rate", labels = scales::comma, breaks = seq(from = 0, to = 1.75, by = 0.25))
+    ,limits = c(0, 3500)
+    ,breaks = seq(from = 0, to = max(LaborData$`Monthly active job openings (person (s))`), by = 500)) +
+  scale_x_continuous(
+    breaks = seq(from = min(LaborData$Year), to = max(LaborData$Year), by = 1)
+  ) +
+  theme_minimal() +
+  theme(
+    text = element_text(size = 14),
+    axis.title.x = element_text(size = 12, margin = margin(t = 10, r = 0, b = 0, l = 0)),
+    axis.title.y = element_text(size = 12, margin = margin(t = 0, r = 10, b = 0, l = 0)),
+    axis.title.y.right = element_text(size = 12, margin = margin(t = 0, r = 0, b = 0, l = 10)),
+    legend.position = "bottom"
+  )
+
+laborplot
+
+Pic_path_laborplot <- paste0(path_to_workspace, "LaborPlot.pdf")
+ggsave(Pic_path_laborplot , plot = laborplot, width =9, height = 5.5, dpi = 300)
+
+  ylab("Employment-to-Population Ratio (%)")
+
 # CLEAR ####
 #rm(list = ls())         # Clear environment
 #p_unload(all)           # Clear packages
 #cat("\014")             # Clear console
-
 ```
