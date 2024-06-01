@@ -1,5 +1,8 @@
 # main links links
 main:
     
-  - title: "Portfolio/blog"
+    - title: "School/Work"
     url: /portfolio/
+
+    - title: "Japanese"
+    url: /japanese/
