@@ -215,7 +215,7 @@ defaults:
   # _teaching
   - scope:
       path: ""
-      type: teaching
+      type: portfolio
     values:
       layout: single
       author_profile: true
