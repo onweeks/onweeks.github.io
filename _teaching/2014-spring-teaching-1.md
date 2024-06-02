@@ -1,17 +1,23 @@
 ---
-title: "Teaching experience 1"
+title: "A short macOS terminal script to automatically open a texthooker and Manga OCR."
 collection: teaching
 date: 2024-06-02
 excerpt: "test"
 ---
 
-Descrption
+I made a short console script to automatically open a text hooker and Manga OCR. With just a few lines of code, it becomes easier to jump into reading manga at any time.
 
-Heading 1
-======
+The code is a simple script that opens Google Chrome, maximizes the window to full screen, opens an Anacreon text hooker, and finally runs the Python Manga OCR script on a pre-specified system path to read the screenshots.
 
-Heading 2
-======
+```
+osascript -e 'tell application "Google Chrome"
+activate
+  make new window
+  tell application "System Events"
+    keystroke "f" using {control down, command down}
+  end tell
+end tell'
+open https://anacreondjt.gitlab.io/texthooker.html
 
-Heading 3
-======
+python -m manga_ocr "path" # specify path as needed
+```
