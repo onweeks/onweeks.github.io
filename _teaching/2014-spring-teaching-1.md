@@ -1,10 +1,11 @@
 ---
 title: "Teaching experience 1"
 collection: teaching
+date: 2024-06-02
 excerpt: "test"
 ---
 
-This is a description of a teaching experience. You can use markdown like any other post.
+Descrption
 
 Heading 1
 ======
