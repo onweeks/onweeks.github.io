@@ -33,7 +33,7 @@ p_load(
 #devtools::install_github("ropensci/rnaturalearthhires")
 
 # workspace path
-path_to_workspace <- "/Users/olivernyropweeks/Library/CloudStorage/OneDrive-UniversityofCopenhagen/KUonedriveOW/8. Semester - Praktik/Internship Assignment/Workspace/"
+path_to_workspace <- "path" #change path as needed
 
 ###################### 65 % above graph ###################### 
 
