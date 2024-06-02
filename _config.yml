@@ -175,7 +175,7 @@ kramdown:
 
 # Collections
 collections:
-  teaching:
+  japanese:
     output: true
     permalink: /:collection/:path/
   publications:
@@ -212,6 +212,10 @@ defaults:
     values:
       layout: single
       author_profile: true
+  # _japanese
+  - scope:
+      path: ""
+      type: japanese
   # _teaching
   - scope:
       path: ""
